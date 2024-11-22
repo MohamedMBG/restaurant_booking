@@ -591,29 +591,34 @@ body
 /* -------------------------------------------- TOP NOTCHES ------------------------------------------- */
 /* Card styling */
 .card {
-  width: 300px; /* Defines the card width */
-  height: 400px; /* Defines the card height */
-  position: relative; /* Sets the card's position relative for child elements to position absolutely */
-  display: flex; /* Makes the card content use flexbox layout */
-  justify-content: center; /* Centers child elements horizontally inside the card */
-  align-items: flex-end; /* Aligns child elements to the bottom of the card */
-  padding: 0 36px; /* Adds horizontal padding inside the card */
-  perspective: 2500px; /* Creates a 3D perspective effect for child elements */
-  margin: 30px 20px; /* Adds spacing around the card: 30px top/bottom, 20px left/right */
-  border-radius: 5px; /* Adds rounded corners to the card */
+  /* f had 2 lignes on va definir la hauteur et la largeur dyal les cardes */
+  width: 300px; 
+  height: 400px; 
+  position: relative; 
+  display: flex; 
+  /* had la ligne hadi ghadi tkhlina n centriw l content horizontally */
+  justify-content: center; 
+  /* bach n7to les elements f lt7t */
+  align-items: flex-end; 
+  padding: 0 36px; 
+  /* kaydir l'effet 3D l elements dyal l card */
+  perspective: 2500px; 
+  margin: 30px 20px; 
+  border-radius: 5px; 
 }
 
 .cover-image {
-  width: 100%; /* Makes the cover image span the full width of the card */
-  height: 100%; /* Makes the cover image span the full height of the card */
-  object-fit: cover; /* Ensures the image scales to cover the card without distortion */
+  width: 100%; 
+  height: 100%; 
+  /* kaydkhl image fi l card b tarika li mat3tiksh distorsion. */
+  object-fit: cover; 
 }
 
 .wrapper {
-  transition: all 0.5s; /* Smooth animation effect when properties change */
-  position: absolute; /* Positions the wrapper absolutely within the card */
-  width: 100%; /* Sets the wrapper width to match the card's width */
-  z-index: -1; /* Places the wrapper behind other elements using stacking order */
+  transition: all 0.5s; 
+  position: absolute; 
+  width: 100%; 
+  z-index: -1; 
 }
 
 .card:hover .wrapper {
@@ -625,34 +630,36 @@ body
 
 .wrapper::before,
 .wrapper::after {
-  content: ""; /* Adds pseudo-elements to create gradient overlays */
-  opacity: 0; /* Initially hides the gradients */
-  width: 100%; /* Makes the gradient span the full width of the wrapper */
-  height: 80px; /* Sets a default height for the gradient overlay */
-  transition: all 0.5s; /* Adds a smooth transition when properties change */
-  position: absolute; /* Positions the gradient absolutely within the wrapper */
-  left: 0; /* Aligns the gradient to the left edge */
+  content: ""; /* Kaydir pseudo-élément khawi (vacuum) bach n5dmou bih l'overlay */
+  opacity: 0;
+  width: 100%; /* Khdamna l'width dyalhom 100% bach yoccupiw l'3ard dyal wrapper */
+  height: 80px; /* T7ddina l'height dyalhom 80px f l'awal */
+  transition: all 0.5s; /* Khdamna transition smooth bach ghir ntbeddlou f chi wahed mn les propriétés */
+  position: absolute; /* Positionnement absolute f wrapper */
+  left: 0; /* Kaynin fi l'khit dyal l'left dyal wrapper */
 }
 
+/* Gradient dyal .wrapper::before (gradient fl fo9) */
 .wrapper::before {
-  top: 0; /* Places the gradient at the top of the wrapper */
-  height: 100%; /* Extends the gradient to cover the wrapper's height */
-  background-image: linear-gradient(
-    to top,
-    transparent 46%, /* Creates a transparent start at 46% height */
-    rgba(0, 0, 0, 0.5) 68%, /* Adds semi-transparent black at 68% */
-    rgba(0, 0, 0, 1) 97% /* Ends with solid black at 97% */
+  top: 0; /* Kaynin fl fo9 dyal wrapper */
+  height: 100%; /* Kayghatiw l'height dyal wrapper kaml */
+  background-image: linear-gradient( /* Créer un gradient mn lfo9 lta7t */
+    to top, /* Direction dyal gradient mn l'bass l'fo9 */
+    transparent 46%, /* L'élément transparent 7tta 46% mn l'height */
+    rgba(0, 0, 0, 0.5) 68%, /* Zaydina color noir semi-transparent m3a 68% */
+    rgba(0, 0, 0, 1) 97% /* Finit b'color noir opaque m3a 97% */
   );
 }
 
+/* Gradient dyal .wrapper::after (gradient fl ta7t) */
 .wrapper::after {
-  bottom: 0; /* Places the gradient at the bottom of the wrapper */
-  opacity: 1; /* Makes the bottom gradient visible by default */
-  background-image: linear-gradient(
-    to bottom,
-    transparent 46%, /* Creates a transparent start at 46% height */
-    rgba(0, 0, 0, 0.5) 68%, /* Adds semi-transparent black at 68% */
-    rgba(0, 0, 0, 1) 97% /* Ends with solid black at 97% */
+  bottom: 0; /* Kaynin fl ta7t dyal wrapper */
+  opacity: 1; /* L'élément kayban b'visible mn l'awal */
+  background-image: linear-gradient( /* Créer un gradient mn lta7t lfo9 */
+    to bottom, /* Direction dyal gradient mn l'fo9 lta7t */
+    transparent 46%, /* L'élément transparent 7tta 46% mn l'height */
+    rgba(0, 0, 0, 0.5) 68%, /* Zaydina color noir semi-transparent m3a 68% */
+    rgba(0, 0, 0, 1) 97% /* Finit b'color noir opaque m3a 97% */
   );
 }
 
@@ -707,13 +714,13 @@ body
 
 /* had le code hada lli lt7t bach nkhli hadik top notches kbira ktr */
 .headline-1 {
-  font-size: 4rem; /* Makes the font size larger (adjust as needed) */
-  font-weight: bold; /* Optional: Makes the text bold */
-  color: beige; /* Ensures the text color is beige */
-  text-align: center; /* Optional: Centers the text */
-  margin-top: 30px; /* Optional: Adds some margin at the top */
+  font-size: 4rem; 
+  font-weight: bold; 
+  color: beige;
+  text-align: center; 
+  margin-top: 30px; 
 }
 
 .section-text {
-  margin-bottom: 20px; /* Adds space at the bottom (adjust as needed) */
+  margin-bottom: 20px; 
 }
