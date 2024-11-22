@@ -724,3 +724,7 @@ body
 .section-text {
   margin-bottom: 20px; 
 }
+
+.middle-element {
+  transform: translateY(40px);  /* Moves the element 10px down */
+}
