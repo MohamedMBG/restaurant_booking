@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+:root {
+  /* === Color Definitions === */
+  /* Defining custom color variables for consistency throughout the styles */
+  --gold-crayola: hsl(38, 61%, 73%);
+  --quick-silver: hsla(0, 0%, 65%, 1);
+  --davys-grey: hsla(30, 3%, 34%, 1);
+  --smoky-black-1: hsla(40, 12%, 5%, 1);
+  --smoky-black-2: hsla(30, 8%, 5%, 1);
+  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --eerie-black-1: hsla(210, 4%, 9%, 1);
+  --eerie-black-2: hsla(210, 4%, 11%, 1);
+  --eerie-black-3: hsla(180, 2%, 8%, 1);
+  --eerie-black-4: hsla(0, 0%, 13%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+  --black: hsla(0, 0%, 0%, 1);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+
+  /* === Gradient Definitions === */
+  --loading-text-gradient: linear-gradient(90deg, 
+    transparent 0% 16.66%, 
+    var(--smoky-black-3) 33.33% 50%, 
+    transparent 66.66% 75%
+  );
+  --gradient-1: linear-gradient(to top, 
+    hsla(0, 0%, 0%, 0.9), 
+    hsla(0, 0%, 0%, 0.7), 
+    transparent
+  );
+}
+
+/* ======================================================== General Reset ============================================================= 
+Resetting styles to ensure uniform appearance across different browsers 
+f had la partie hadi b7ala kan7ydo default settings dyal l broswer bach l website dyalna yji kimma 7na bagbhin 
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a, img, data, span, input, button, select, ion-icon, textarea { 
+  display: block; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { 
+  height: auto; 
+}
+
+input,
+button,
+select,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input, select, textarea {
+  width: 100%;
+  outline: none;
+}
+
+button { cursor: pointer; }
+
+address { 
+  font-style: normal; 
+}
+
+/* ==================================================== Basic HTML & Body Styles ==================================================== */
+html {
+  font-size: 10px; /* hnaya adrna l font dyal website ykoun 3ndo dik 10px */
+  scroll-behavior: smooth; /* had l code bach tji scroll smooth machi 9ass7a */
+}
+
+body {
+  font-family: var(--font-family); /* Ensuring consistent font */
+  color: var(--text-color);
+  background-color: var(--eerie-black-4); /* Background color */
+  line-height: 1.6; 
+}
+body
+/* === Scrollbar Customization === */
+::-webkit-scrollbar { 
+  width: 5px; /* Custom width for the scrollbar */
+}
+
+::-webkit-scrollbar-track { 
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb { 
+  background-color: var(--gold-crayola); /* Custom color for the scrollbar thumb */
+}
+
+/* =========================================================  HEADER =========================================================== */
+
+/* General Header Styles */
+.header {
+  position: sticky;
+  top: 0; /* Stick to the top */
+  background-color: #333;
+  z-index: 1000; /* Ensure it stays above other content */
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual separation */
+}
+
+/* Container to hold logo, navMenu, and button */
+.container_header {
+  display: flex;
+  position:relative;
+}
+
+/* Style the navigation menu */
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the nav links */
+  flex-grow: 1; /* Make sure the navMenu takes up available space */
+}
+
+/* Navigation links */
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 30px;
+  position: relative;
+  padding-bottom: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #d2c99a;
+}
+
+.navMenu a:hover .dot {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #d2c99a;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button Styles */
+.btn-secondary {
+  background-color: transparent;
+  color: #f6f4e6;
+  padding: 10px 20px;
+  border: 2px solid #f6f4e6;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute; /* Position button on the right side */
+  right: 0;
+  top: 50%;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #f6f4e6;
+  color: #333;
+}
+
+.text {
+  position: relative;
+}
+
+.text-1 {
+  z-index: 2;
+}
+
+.text-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn-secondary:hover .text-2 {
+  opacity: 1;
+}
+
+.overlay {
+  display: none;
+}
+/* === Hero Section Styles === */
+.hero {
+  position: relative;
+  padding-block: 120px;
+  min-height: 100vh; /* Full screen height */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero .slider-btn { 
+  display: none; /* Hides the slider button */
+}
+
+.hero .slider-item {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  padding-top: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1;
+}
+
+.hero .slider-item.active {
+  opacity: 1;
+  visibility: visible; /* Shows active slider items */
+}
+
+.hero .slider-bg {
+  position: absolute;
+  inset: 0;
+  transform: scale(1.15);
+  pointer-events: none; /* Prevents interaction with background */
+  z-index: -1;
+}
+
+.hero .slider-item.active .slider-bg {
+  animation: smoothScale 7s linear forwards; /* Animates the background scaling */
+}
+
+@keyframes smoothScale {
+  from { 
+    transform: scale(1); 
+  }
+  to { 
+    transform: scale(1.15); 
+  }
+}
+
+.hero .section-subtitle::after {
+  margin: 14px 0 20px; /* Adds space after subtitle */
+}
+
+.hero-text {
+  margin: 10px 0 40px; /* Margin for text content */
+}
+
+.hero .btn { 
+  margin: auto; 
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 2;
+  background-color: var(--gold-crayola);
+  width: 110px;
+  height: 110px;
+  padding: 12px;
+  transform: scale(0.6); /* Scaled button for effect */
+}
+
+.hero-btn img { 
+  margin: auto 0 6px; 
+}
+
+.hero-btn .span {
+  color: var(--black);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-1);
+  line-height: var(--lineHeight-3);
+}
+
+.hero-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--gold-crayola);
+  animation: rotate360 15s linear infinite; /* Continuous rotation animation */
+}
+
+.slider-reveal {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.hero .slider-item.active .slider-reveal {
+  animation: sliderReveal 1s ease forwards;
+}
+
+@keyframes sliderReveal {
+  from { 
+    transform: translateY(30px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+.hero .slider-item.active .section-subtitle,
+.hero .slider-item.active .hero-title,
+.hero .slider-item.active .hero-text,
+.hero .slider-item.active .btn {
+  animation: sliderReveal 1s ease forwards;
+}
+
+.hero .slider-item.active .section-subtitle { 
+  animation-delay: 500ms; 
+}
+
+.hero .slider-item.active .hero-title { 
+  animation-delay: 1000ms; 
+}
+
+/* === Topbar Styles === */
+.topbar {
+  display: none;
+}
+
+@media (min-width: 575px) {
+  .topbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 10px;
+    border-block-end: 1px solid var(--white-alpha-20);
+    z-index: 4;
+    transition: var(--transition-1);
+  }
+
+  .topbar:has(~ .header.active) {
+    transform: translateY(-100%); /* Hide topbar when header is active */
+  }
+
+  .topbar-item:not(.link),
+  .topbar .separator {
+    display: none;
+  }
+
+  .topbar .container,
+  .topbar-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .topbar .container {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .topbar-item {
+    gap: 6px;
+  }
+
+  .topbar-item ion-icon {
+    --ionicon-stroke-width: 60px; /* Larger icon stroke */
+  }
+}
+
+.topbar-item a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-item a,
+.topbar-item .text {
+  color: var(--gold-crayola);
+  font-weight: bold;
+  font-size: var(--fontSize-5);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2);
+}
+
+
+
+.features .section-title { margin-block-end: 40px; }
+
+.feature-card { padding: 30px 20px 40px; }
+
+/*  ---------------feature-item--------------- had le code hada bach kant7kmo f le styling dyal les elements dyal our Strength */
+.feature-item:nth-child(2n+1) .feature-card { 
+  background-color: var(--eerie-black-3); 
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.feature-item:nth-child(2n) .feature-card { 
+  background-color: var(--smoky-black-3);   
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.feature-card .card-icon {
+  max-width: max-content;
+  margin-inline: auto;
+  transition: var(--transition-2);
+}
+
+.feature-card:hover .card-icon { transform: scale(-1) rotate(180deg); }
+
+.feature-card .card-title { 
+  margin-block: 20px; 
+  color: beige;
+}
+
+.feature-card .card-text {
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-6);
+}
+
+/**
+   * FEATURES
+   */
+
+   .features { overflow: visible; }
+
+   .features .shape { display: block; }
+ 
+   .features .shape-1 {
+     top: -100px;
+     right: 0;
+   }
+ 
+   .features .shape-2 {
+     bottom: 80px;
+     left: 0;
+   }
+
+   /**
+   * FEATURES
+   */
+
+  .features .grid-list { grid-template-columns: repeat(4, 1fr); }
+
+/*-----------------------------------*\
+  
+
+/* had separator katkhlina ndiro squares mrb3in li toul w l3rd dyalhom 8px w 3ndhom wahd line k7l entourage  */
+.separator {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--gold-crayola);
+  transform: rotate(45deg);
+}
+.contact-number::after { bottom: -5px; }
+
+.text-center { text-align: center; }
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-subtitle {
+  position: relative;
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2);
+  margin-block-end: 12px;
+}
+
+.section-subtitle::after {
+  content: url('../images/separator.svg');
+  display: block;
+  width: 100px;
+  margin-inline: auto;
+  margin-block-start: 5px;
+}
+
+.btn {
+  position: relative;
+  color: var(--gold-crayola);
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-5);
+  max-width: max-content;
+  border: 2px solid var(--gold-crayola);
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  border-radius: var(--radius-circle);
+  background-color: var(--gold-crayola);
+  transition: var(--transition-2);
+  z-index: -1;
+}
+
+.btn .text { transition: var(--transition-1); }
+
+.btn .text-2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: max-content;
+  color: var(--smoky-black-1);
+}
+
+.btn:is(:hover, :focus-visible)::before { bottom: -50%; }
+
+.btn:is(:hover, :focus-visible) .text-1 { transform: translateY(-40px); }
+
+.btn:is(:hover, :focus-visible) .text-2 {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-secondary {
+  background-color: var(--gold-crayola);
+  color: var(--black);
+}
+
+.btn-secondary::before { background-color: var(--smoky-black-1); }
+
+.btn-secondary .text-2 { color: var(--white); }
+
+.section {
+  position: relative;
+  padding-block: var(--section-space);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.grid-list {
+  display: grid;
+  gap: 40px;
+}
+
+.shape {
+  display: none;
+  position: absolute;
+  max-width: max-content;
+  z-index: -1;
+}
+
+@keyframes move {
+  0%,
+  100% { transform: translateY(0); }
+
+  50% { transform: translateY(30px); }
+}
+
+/* -------------------------------------------- section-text -------------------------------------------- */
+.section-text {
+  color: white;
+}
+
+/* -------------------------------------------- TOP NOTCHES ------------------------------------------- */
+/* Card styling */
+.card {
+  width: 300px; /* Defines the card width */
+  height: 400px; /* Defines the card height */
+  position: relative; /* Sets the card's position relative for child elements to position absolutely */
+  display: flex; /* Makes the card content use flexbox layout */
+  justify-content: center; /* Centers child elements horizontally inside the card */
+  align-items: flex-end; /* Aligns child elements to the bottom of the card */
+  padding: 0 36px; /* Adds horizontal padding inside the card */
+  perspective: 2500px; /* Creates a 3D perspective effect for child elements */
+  margin: 30px 20px; /* Adds spacing around the card: 30px top/bottom, 20px left/right */
+  border-radius: 5px; /* Adds rounded corners to the card */
+}
+
+.cover-image {
+  width: 100%; /* Makes the cover image span the full width of the card */
+  height: 100%; /* Makes the cover image span the full height of the card */
+  object-fit: cover; /* Ensures the image scales to cover the card without distortion */
+}
+
+.wrapper {
+  transition: all 0.5s; /* Smooth animation effect when properties change */
+  position: absolute; /* Positions the wrapper absolutely within the card */
+  width: 100%; /* Sets the wrapper width to match the card's width */
+  z-index: -1; /* Places the wrapper behind other elements using stacking order */
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0); /* Tilts the wrapper when the card is hovered */
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* Adds a shadow effect under the wrapper */
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* Shadow for WebKit-based browsers */
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* Shadow for Mozilla-based browsers */
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: ""; /* Adds pseudo-elements to create gradient overlays */
+  opacity: 0; /* Initially hides the gradients */
+  width: 100%; /* Makes the gradient span the full width of the wrapper */
+  height: 80px; /* Sets a default height for the gradient overlay */
+  transition: all 0.5s; /* Adds a smooth transition when properties change */
+  position: absolute; /* Positions the gradient absolutely within the wrapper */
+  left: 0; /* Aligns the gradient to the left edge */
+}
+
+.wrapper::before {
+  top: 0; /* Places the gradient at the top of the wrapper */
+  height: 100%; /* Extends the gradient to cover the wrapper's height */
+  background-image: linear-gradient(
+    to top,
+    transparent 46%, /* Creates a transparent start at 46% height */
+    rgba(0, 0, 0, 0.5) 68%, /* Adds semi-transparent black at 68% */
+    rgba(0, 0, 0, 1) 97% /* Ends with solid black at 97% */
+  );
+}
+
+.wrapper::after {
+  bottom: 0; /* Places the gradient at the bottom of the wrapper */
+  opacity: 1; /* Makes the bottom gradient visible by default */
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%, /* Creates a transparent start at 46% height */
+    rgba(0, 0, 0, 0.5) 68%, /* Adds semi-transparent black at 68% */
+    rgba(0, 0, 0, 1) 97% /* Ends with solid black at 97% */
+  );
+}
+
+.card:hover .wrapper::before,
+.card:hover .wrapper::after {
+  opacity: 1; /* Makes both gradients fully visible when the card is hovered */
+}
+
+.card:hover .wrapper::after {
+  height: 120px; /* Increases the bottom gradient height when hovered */
+}
+
+.title {
+  width: 100%; /* Makes the title span the full width of the card */
+  transition: transform 0.5s; /* Adds a smooth animation effect when the transform property changes */
+}
+
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px); /* Moves the title upward and toward the viewer on hover */
+}
+
+.character {
+  width: 100%; /* Makes the character image span the full width of the card */
+  opacity: 0; /* Hides the character initially */
+  transition: all 0.5s; /* Adds a smooth transition for all properties */
+  position: absolute; /* Positions the character absolutely within the card */
+  z-index: -1; /* Places the character behind other elements */
+}
+
+.card:hover .character {
+  opacity: 1; /* Makes the character fully visible when the card is hovered */
+  transform: translate3d(0%, -30%, 100px); /* Moves the character upward and toward the viewer on hover */
+}
+
+/* Section styling */
+.section.service {
+  display: flex; /* Aligns the cards using flexbox */
+  flex-wrap: nowrap; /* Ensures the cards are in a single horizontal row */
+  justify-content: center; /* Centers the cards horizontally */
+  align-items: flex-start; /* Aligns the cards to the top of the container */
+  padding: 50px 20px; /* Adds padding around the entire section */
+}
+
+.container_notches {
+  display: flex; /* Enables flexbox layout to align child elements */
+  flex-wrap: nowrap; /* Keeps all child elements in a single row */
+  justify-content: center; /* Horizontally centers the child elements */
+  align-items: center; /* Vertically aligns the child elements to the middle */
+  gap: 50px; /* Adds 50px horizontal spacing between child elements */
+  margin-top: 40px; /* Adds extra spacing above the container */
+}
+
+/* had le code hada lli lt7t bach nkhli hadik top notches kbira ktr */
+.headline-1 {
+  font-size: 4rem; /* Makes the font size larger (adjust as needed) */
+  font-weight: bold; /* Optional: Makes the text bold */
+  color: beige; /* Ensures the text color is beige */
+  text-align: center; /* Optional: Centers the text */
+  margin-top: 30px; /* Optional: Adds some margin at the top */
+}
+
+.section-text {
+  margin-bottom: 20px; /* Adds space at the bottom (adjust as needed) */
+}
