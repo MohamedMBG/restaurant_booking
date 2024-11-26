@@ -728,3 +728,31 @@ body
 .middle-element {
   transform: translateY(40px);  /* Moves the element 10px down */
 }
+.container{max-width: 1170px;
+  
+  margin: auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.ul{
+  list-style: none;
+}
+.footer{
+  background-color: #333;
+  padding: 70px 0;
+}
+.footer-col{
+width: 25%;
+padding: 0 15px;
+}
+.footer-col{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+
+
+}
