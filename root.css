@@ -75,3 +75,28 @@ button { cursor: pointer; }
 address { 
   font-style: normal; 
 }
+/* ========================================= Basic HTML & Body Styles ========================================== */
+html {
+    font-size: 10px; /* hnaya adrna l font dyal website ykoun 3ndo dik 10px */
+    scroll-behavior: smooth; /* had l code bach tji scroll smooth machi 9ass7a */
+  }
+  
+  body {
+    font-family: var(--font-family); /* Ensuring consistent font */
+    color: var(--text-color);
+    background-color: var(--eerie-black-4); /* Background color */
+    line-height: 1.6; 
+  }
+  body
+  /* === Scrollbar Customization === */
+  ::-webkit-scrollbar { 
+    width: 5px; /* Custom width for the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track { 
+    background-color: transparent; 
+  }
+  
+  ::-webkit-scrollbar-thumb { 
+    background-color: var(--gold-crayola); /* Custom color for the scrollbar thumb */
+  }
