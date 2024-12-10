@@ -1,85 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-:root {
-  /* === Color Definitions === */
-  /* Defining custom color variables for consistency throughout the styles */
-  --gold-crayola: hsl(38, 61%, 73%);
-  --quick-silver: hsla(0, 0%, 65%, 1);
-  --davys-grey: hsla(30, 3%, 34%, 1);
-  --smoky-black-1: hsla(40, 12%, 5%, 1);
-  --smoky-black-2: hsla(30, 8%, 5%, 1);
-  --smoky-black-3: hsla(0, 3%, 7%, 1);
-  --eerie-black-1: hsla(210, 4%, 9%, 1);
-  --eerie-black-2: hsla(210, 4%, 11%, 1);
-  --eerie-black-3: hsla(180, 2%, 8%, 1);
-  --eerie-black-4: hsla(0, 0%, 13%, 1);
-  --white: hsla(0, 0%, 100%, 1);
-  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
-  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
-  --black: hsla(0, 0%, 0%, 1);
-  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
-  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
-
-  /* === Gradient Definitions === */
-  --loading-text-gradient: linear-gradient(90deg, 
-    transparent 0% 16.66%, 
-    var(--smoky-black-3) 33.33% 50%, 
-    transparent 66.66% 75%
-  );
-  --gradient-1: linear-gradient(to top, 
-    hsla(0, 0%, 0%, 0.9), 
-    hsla(0, 0%, 0%, 0.7), 
-    transparent
-  );
-}
-
-/* ======================================================== General Reset ============================================================= 
-Resetting styles to ensure uniform appearance across different browsers 
-f had la partie hadi b7ala kan7ydo default settings dyal l broswer bach l website dyalna yji kimma 7na bagbhin 
-*/
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-li { list-style: none; }
-
-a, img, data, span, input, button, select, ion-icon, textarea { 
-  display: block; 
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img { 
-  height: auto; 
-}
-
-input,
-button,
-select,
-textarea {
-  background: none;
-  border: none;
-  font: inherit;
-}
-
-input, select, textarea {
-  width: 100%;
-  outline: none;
-}
-
-button { cursor: pointer; }
-
-address { 
-  font-style: normal; 
-}
-
-/* ==================================================== Basic HTML & Body Styles ==================================================== */
+/* ========================================= Basic HTML & Body Styles ========================================== */
 html {
   font-size: 10px; /* hnaya adrna l font dyal website ykoun 3ndo dik 10px */
   scroll-behavior: smooth; /* had l code bach tji scroll smooth machi 9ass7a */
@@ -105,7 +24,7 @@ body
   background-color: var(--gold-crayola); /* Custom color for the scrollbar thumb */
 }
 
-/* =========================================================  HEADER =========================================================== */
+/* =================================================  HEADER =================================================== */
 
 /* General Header Styles */
 .header {
@@ -210,136 +129,6 @@ body
 .overlay {
   display: none;
 }
-/* === Hero Section Styles === */
-.hero {
-  position: relative;
-  padding-block: 120px;
-  min-height: 100vh; /* Full screen height */
-  overflow: hidden;
-  z-index: 1;
-}
-
-.hero .slider-btn { 
-  display: none; /* Hides the slider button */
-}
-
-.hero .slider-item {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  padding-top: 100px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 1;
-}
-
-.hero .slider-item.active {
-  opacity: 1;
-  visibility: visible; /* Shows active slider items */
-}
-
-.hero .slider-bg {
-  position: absolute;
-  inset: 0;
-  transform: scale(1.15);
-  pointer-events: none; /* Prevents interaction with background */
-  z-index: -1;
-}
-
-.hero .slider-item.active .slider-bg {
-  animation: smoothScale 7s linear forwards; /* Animates the background scaling */
-}
-
-@keyframes smoothScale {
-  from { 
-    transform: scale(1); 
-  }
-  to { 
-    transform: scale(1.15); 
-  }
-}
-
-.hero .section-subtitle::after {
-  margin: 14px 0 20px; /* Adds space after subtitle */
-}
-
-.hero-text {
-  margin: 10px 0 40px; /* Margin for text content */
-}
-
-.hero .btn { 
-  margin: auto; 
-}
-
-.hero-btn {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  z-index: 2;
-  background-color: var(--gold-crayola);
-  width: 110px;
-  height: 110px;
-  padding: 12px;
-  transform: scale(0.6); /* Scaled button for effect */
-}
-
-.hero-btn img { 
-  margin: auto 0 6px; 
-}
-
-.hero-btn .span {
-  color: var(--black);
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: var(--letterSpacing-1);
-  line-height: var(--lineHeight-3);
-}
-
-.hero-btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--gold-crayola);
-  animation: rotate360 15s linear infinite; /* Continuous rotation animation */
-}
-
-.slider-reveal {
-  transform: translateY(30px);
-  opacity: 0;
-}
-
-.hero .slider-item.active .slider-reveal {
-  animation: sliderReveal 1s ease forwards;
-}
-
-@keyframes sliderReveal {
-  from { 
-    transform: translateY(30px); 
-    opacity: 0; 
-  }
-  to { 
-    transform: translateY(0); 
-    opacity: 1; 
-  }
-}
-
-.hero .slider-item.active .section-subtitle,
-.hero .slider-item.active .hero-title,
-.hero .slider-item.active .hero-text,
-.hero .slider-item.active .btn {
-  animation: sliderReveal 1s ease forwards;
-}
-
-.hero .slider-item.active .section-subtitle { 
-  animation-delay: 500ms; 
-}
-
-.hero .slider-item.active .hero-title { 
-  animation-delay: 1000ms; 
-}
-
 /* === Topbar Styles === */
 .topbar {
   display: none;
@@ -408,7 +197,8 @@ body
 
 .feature-card { padding: 30px 20px 40px; }
 
-/*  ---------------feature-item--------------- had le code hada bach kant7kmo f le styling dyal les elements dyal our Strength */
+/*  ------------------------------------------------ feature-item ----------------------------------------------*/ 
+/* had le code hada bach kant7kmo f le styling dyal les elements dyal our Strength */
 .feature-item:nth-child(2n+1) .feature-card { 
   background-color: var(--eerie-black-3); 
   border-radius: 10px;
@@ -439,9 +229,7 @@ body
   line-height: var(--lineHeight-6);
 }
 
-/**
-   * FEATURES
-   */
+/* =================================================  FEATURES ================================================= */
 
    .features { overflow: visible; }
 
@@ -463,8 +251,7 @@ body
 
   .features .grid-list { grid-template-columns: repeat(4, 1fr); }
 
-/*-----------------------------------*\
-  
+/* ------------------------------------------------------------------------------------------------------------ *\
 
 /* had separator katkhlina ndiro squares mrb3in li toul w l3rd dyalhom 8px w 3ndhom wahd line k7l entourage  */
 .separator {
@@ -587,158 +374,7 @@ body
 .section-text {
   color: white;
 }
-
-/* -------------------------------------------- TOP NOTCHES ------------------------------------------- */
-/* Card styling */
-.card {
-  /* f had 2 lignes on va definir la hauteur et la largeur dyal les cardes */
-  width: 300px; 
-  height: 400px; 
-  position: relative; 
-  display: flex; 
-  /* had la ligne hadi ghadi tkhlina n centriw l content horizontally */
-  justify-content: center; 
-  /* bach n7to les elements f lt7t */
-  align-items: flex-end; 
-  padding: 0 36px; 
-  /* kaydir l'effet 3D l elements dyal l card */
-  perspective: 2500px; 
-  margin: 30px 20px; 
-  border-radius: 5px; 
-}
-
-.cover-image {
-  width: 100%; 
-  height: 100%; 
-  /* kaydkhl image fi l card b tarika li mat3tiksh distorsion. */
-  object-fit: cover; 
-}
-
-.wrapper {
-  transition: all 0.5s; 
-  position: absolute; 
-  width: 100%; 
-  z-index: -1; 
-}
-
-.card:hover .wrapper {
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0); /* Tilts the wrapper when the card is hovered */
-  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* Adds a shadow effect under the wrapper */
-  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* Shadow for WebKit-based browsers */
-  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* Shadow for Mozilla-based browsers */
-}
-
-.wrapper::before,
-.wrapper::after {
-  content: ""; /* Kaydir pseudo-élément khawi (vacuum) bach n5dmou bih l'overlay */
-  opacity: 0;
-  width: 100%; /* Khdamna l'width dyalhom 100% bach yoccupiw l'3ard dyal wrapper */
-  height: 80px; /* T7ddina l'height dyalhom 80px f l'awal */
-  transition: all 0.5s; /* Khdamna transition smooth bach ghir ntbeddlou f chi wahed mn les propriétés */
-  position: absolute; /* Positionnement absolute f wrapper */
-  left: 0; /* Kaynin fi l'khit dyal l'left dyal wrapper */
-}
-
-/* Gradient dyal .wrapper::before (gradient fl fo9) */
-.wrapper::before {
-  top: 0; /* Kaynin fl fo9 dyal wrapper */
-  height: 100%; /* Kayghatiw l'height dyal wrapper kaml */
-  background-image: linear-gradient( /* Créer un gradient mn lfo9 lta7t */
-    to top, /* Direction dyal gradient mn l'bass l'fo9 */
-    transparent 46%, /* L'élément transparent 7tta 46% mn l'height */
-    rgba(0, 0, 0, 0.5) 68%, /* Zaydina color noir semi-transparent m3a 68% */
-    rgba(0, 0, 0, 1) 97% /* Finit b'color noir opaque m3a 97% */
-  );
-}
-
-/* Gradient dyal .wrapper::after (gradient fl ta7t) */
-.wrapper::after {
-  bottom: 0; /* Kaynin fl ta7t dyal wrapper */
-  opacity: 1; /* L'élément kayban b'visible mn l'awal */
-  background-image: linear-gradient( /* Créer un gradient mn lta7t lfo9 */
-    to bottom, /* Direction dyal gradient mn l'fo9 lta7t */
-    transparent 46%, /* L'élément transparent 7tta 46% mn l'height */
-    rgba(0, 0, 0, 0.5) 68%, /* Zaydina color noir semi-transparent m3a 68% */
-    rgba(0, 0, 0, 1) 97% /* Finit b'color noir opaque m3a 97% */
-  );
-}
-
-.card:hover .wrapper::before,
-.card:hover .wrapper::after {
-  opacity: 1; /* Makes both gradients fully visible when the card is hovered */
-}
-
-.card:hover .wrapper::after {
-  height: 120px; /* Increases the bottom gradient height when hovered */
-}
-
-.title {
-  width: 100%; /* Makes the title span the full width of the card */
-  transition: transform 0.5s; /* Adds a smooth animation effect when the transform property changes */
-}
-
-.card:hover .title {
-  transform: translate3d(0%, -50px, 100px); /* Moves the title upward and toward the viewer on hover */
-}
-
-.character {
-  width: 100%; /* Makes the character image span the full width of the card */
-  opacity: 0; /* Hides the character initially */
-  transition: all 0.5s; /* Adds a smooth transition for all properties */
-  position: absolute; /* Positions the character absolutely within the card */
-  z-index: -1; /* Places the character behind other elements */
-}
-
-.card:hover .character {
-  opacity: 1; /* Makes the character fully visible when the card is hovered */
-  transform: translate3d(0%, -30%, 100px); /* Moves the character upward and toward the viewer on hover */
-}
-
-/* Section styling */
-.section.service {
-  display: flex; /* Aligns the cards using flexbox */
-  flex-wrap: nowrap; /* Ensures the cards are in a single horizontal row */
-  justify-content: center; /* Centers the cards horizontally */
-  align-items: flex-start; /* Aligns the cards to the top of the container */
-  padding: 50px 20px; /* Adds padding around the entire section */
-}
-
-.container_notches {
-  display: flex; /* Enables flexbox layout to align child elements */
-  flex-wrap: nowrap; /* Keeps all child elements in a single row */
-  justify-content: center; /* Horizontally centers the child elements */
-  align-items: center; /* Vertically aligns the child elements to the middle */
-  gap: 50px; /* Adds 50px horizontal spacing between child elements */
-  margin-top: 40px; /* Adds extra spacing above the container */
-}
-
-/* had le code hada lli lt7t bach nkhli hadik top notches kbira ktr */
-.headline-1 {
-  font-size: 4rem; 
-  font-weight: bold; 
-  color: beige;
-  text-align: center; 
-  margin-top: 30px; 
-}
-
-.section-text {
-  margin-bottom: 20px; 
-}
-
-.middle-element {
-  transform: translateY(40px);  /* Moves the element 10px down */
-}
-.container{max-width: 1170px;
-  
-  margin: auto;
-}
-.row{
-  display: flex;
-  flex-wrap: wrap;
-}
-.ul{
-  list-style: none;
-}
+/* -------------------------------------------- FOOTER SECTION -------------------------------------------- */
 .footer{
   background-color: #333;
   padding: 70px 0;
@@ -753,6 +389,4 @@ padding: 0 15px;
   text-transform: capitalize;
   margin-bottom: 30px;
   position: relative;
-
-
 }
