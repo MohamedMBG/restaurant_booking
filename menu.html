@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURELIUS - Menu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="3d_cards.css" />
+    <link rel="stylesheet" href="root.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="HEADER.CSS" />
+    <link rel="stylesheet" href="menu.CSS" />
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  </head>
+
+  <body id="top">
+    <!-- ************************ #PRELOADER ************************ -->
+    <div class="preload" data-preaload>
+      <div class="circle"></div>
+      <p class="text">Aurelius</p>
+    </div>
+
+    <!-- ************************ #TOP BAR ************************ -->
+    <div class="topbar">
+      <div class="container">
+        <address class="topbar-item">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">Restaurant, Adresse XXX, Rabat, Morocco</span>
+        </address>
+
+        <div class="separator"></div>
+
+        <div class="topbar-item">
+          <div class="icon">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">10:00 AM - 01:00 AM</span>
+        </div>
+
+        <div class="separator"></div>
+
+        <a href="tel:+212623144441" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">+212 62314-4441</span>
+        </a>
+
+        <div class="separator"></div>
+
+        <a href="mailto:booking@restaurant.com" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">booking@restaurant.com</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ************************ #HEADER ************************ -->
+    <header class="header" data-header>
+      <div class="container_header">
+        <nav class="navMenu">
+          <a href="index.html" class="navbar-link hover-underline">
+            <span class="span">Home</span>
+            <div class="dot"></div>
+          </a>
+
+          <a href="#menu" class="navbar-link hover-underline active">
+            <span class="span">Menus</span>
+            <div class="dot"></div>
+          </a>
+
+          <a href="#about" class="navbar-link hover-underline">
+            <span class="span">About Us</span>
+            <div class="dot"></div>
+          </a>
+
+          <a href="#chefs" class="navbar-link hover-underline">
+            <span class="span">Our Chefs</span>
+            <div class="dot"></div>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ************************ #MENU SECTION ************************ -->
+    <main>
+      <section class="menu-section" aria-label="menu" id="menu">
+        <div class="container">
+          <p class="section-subtitle label-2">Explore Our Menu</p>
+          <h2 class="headline-1 section-title" style="color: beige;">Delicious Offerings</h2>
+
+          <div class="menu-grid">
+            <!-- Appetizers -->
+            <div class="menu-category">
+              <h3 class="category-title">Appetizers</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1606755456206-b25206cde27e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Bruschetta"
+                    class="menu-item-image"
+                  />
+                  <div class="menu-item-details">
+                    <h4 class="item-title">Bruschetta</h4>
+                    <p class="item-description">Toasted bread topped with tomatoes, basil, and mozzarella.</p>
+                    <span class="item-price">$8.99</span>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Caesar Salad"
+                    class="menu-item-image"
+                  />
+                  <div class="menu-item-details">
+                    <h4 class="item-title">Caesar Salad</h4>
+                    <p class="item-description">Crisp romaine lettuce, croutons, and parmesan cheese.</p>
+                    <span class="item-price">$7.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="menu-category">
+              <h3 class="category-title">Main Courses</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Grilled Salmon"
+                    class="menu-item-image"
+                  />
+                  <div class="menu-item-details">
+                    <h4 class="item-title">Grilled Salmon</h4>
+                    <p class="item-description">Fresh salmon fillet grilled to perfection.</p>
+                    <span class="item-price">$18.99</span>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Beef Steak"
+                    class="menu-item-image"
+                  />
+                  <div class="menu-item-details">
+                    <h4 class="item-title">Beef Steak</h4>
+                    <p class="item-description">Juicy steak served with mashed potatoes.</p>
+                    <span class="item-price">$22.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category">
+              <h3 class="category-title">Desserts</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1571115177098-24ec42ed204a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Chocolate Cake"
+                    class="menu-item-image"
+                  />
+                  <div class="menu-item-details">
+                    <h4 class="item-title">Chocolate Cake</h4>
+                    <p class="item-description">Rich and decadent chocolate cake.</p>
+                    <span class="item-price">$6.99</span>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Cheesecake"
+                    class="menu-item-image"
+                  />
+                  <div class="menu-item-details">
+                    <h4 class="item-title">Cheesecake</h4>
+                    <p class="item-description">Creamy cheesecake with berry topping.</p>
+                    <span class="item-price">$7.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ************************ #FOOTER ************************ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Our Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment Options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Online Shop</h4>
+            <ul>
+              <li><a href="#">Signature Dishes</a></li>
+              <li><a href="#">T-shirts</a></li>
+              <li><a href="#">Magnet</a></li>
+              <li><a href="#">Gourmet Scents</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

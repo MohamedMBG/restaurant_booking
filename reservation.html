@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURELIUS - Reservation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="root.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="reservation.css" /> <!-- New CSS file for the reservation page -->
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("imS9zcYt795zj9Sy2"); // Replace with your EmailJS public key
+      })();
+    </script>
+  </head>
+
+  <body id="top">
+    <!-- ************************ #PRELOADER ************************ -->
+    <div class="preload" data-preaload>
+      <div class="circle"></div>
+      <p class="text">Aurelius</p>
+    </div>
+
+    <!-- ************************ #TOP BAR ************************ -->
+    <div class="topbar">
+      <div class="container">
+        <address class="topbar-item">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">Restaurant, Adresse XXX, Rabat, Morocco</span>
+        </address>
+
+        <div class="separator"></div>
+
+        <div class="topbar-item">
+          <div class="icon">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">10:00 AM - 01:00 AM</span>
+        </div>
+
+        <div class="separator"></div>
+
+        <a href="tel:+212623144441" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">+212 62314-4441</span>
+        </a>
+
+        <div class="separator"></div>
+
+        <a href="mailto:booking@restaurant.com" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">booking@restaurant.com</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ************************ #HEADER ************************ -->
+    <header class="header" data-header>
+      <div class="container_header">
+        <nav class="navMenu">
+          <a href="#home" class="navbar-link hover-underline">
+            <span class="span">Home</span>
+            <div class="dot"></div>
+          </a>
+
+          <a href="#menu" class="navbar-link hover-underline">
+            <span class="span">Menus</span>
+            <div class="dot"></div>
+          </a>
+
+          <a href="#about" class="navbar-link hover-underline">
+            <span class="span">About Us</span>
+            <div class="dot"></div>
+          </a>
+
+          <a href="#reservation" class="navbar-link hover-underline active">
+            <span class="span">Reservation</span>
+            <div class="dot"></div>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ************************ #RESERVATION SECTION ************************ -->
+    <main>
+      <section class="reservation-section" aria-label="reservation" id="reservation">
+        <div class="container">
+          <p class="section-subtitle">Book a Table</p>
+          <h2 class="section-title">Make a Reservation</h2>
+
+          <form id="reservation-form" class="reservation-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" />
+            </div>
+
+            <div class="form-group">
+              <label for="date">Reservation Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+
+            <div class="form-group">
+              <label for="time">Reservation Time</label>
+              <input type="time" id="time" name="time" required />
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Number of Guests</label>
+              <input type="number" id="guests" name="guests" required placeholder="Number of guests" min="1" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Special Requests</label>
+              <textarea id="message" name="message" placeholder="Any special requests?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Reserve Now</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ************************ #FOOTER ************************ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Our Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment Options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Online Shop</h4>
+            <ul>
+              <li><a href="#">Signature Dishes</a></li>
+              <li><a href="#">T-shirts</a></li>
+              <li><a href="#">Magnet</a></li>
+              <li><a href="#">Gourmet Scents</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Reservation Form -->
+    <script>
+      document
+        .getElementById("reservation-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get form data
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            date: document.getElementById("date").value,
+            time: document.getElementById("time").value,
+            guests: document.getElementById("guests").value,
+            message: document.getElementById("message").value,
+          };
+
+          // Send email using EmailJS
+          emailjs
+            .send("service_7j6zixe", "template_84v2uig", formData) // Replace with your EmailJS service ID and template ID
+            .then(
+              function (response) {
+                alert("Reservation successful! We will contact you shortly.");
+                document.getElementById("reservation-form").reset(); // Reset the form
+              },
+              function (error) {
+                alert("Oops! Something went wrong. Please try again.");
+              }
+            );
+        });
+    </script>
+  </body>
+</html>

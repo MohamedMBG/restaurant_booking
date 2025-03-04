@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="3d_cards.css" />
     <link rel="stylesheet" href="root.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="HEADER.CSS" />
     <!-- footer section -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/iconfont/material-icons.min.css"/>
@@ -42,49 +43,45 @@
 
     <!-- ************************ #TOP BAR ************************ -->
 
-    <div class="topbar">
-      <div class="container">
-
-        <address class="topbar-item">
-          <div class="icon">
-            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">
-            Restaurant, Adresse XXX, Rabat, Morocco
-          </span>
-        </address>
-
-        <div class="separator"></div>
-
-        <div class="topbar-item item-2">
-          <div class="icon">
-            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">Toujours : 10.00 am to 01.00 am</span>
-        </div>
-
-        <a href="tel:+212 62314-4441" class="topbar-item link">
-            <div class="icon">
-            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">+212 62314-4441</span>
-        </a>
-
-        <div class="separator"></div>
-
-        <a href="mailto:booking@restaurant.com" class="topbar-item link">
-          <div class="icon">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-          </div>
-
-          <span class="span">aureluis@restaurant.com</span>
-        </a>
-
+    <!-- ************************ #TOP BAR ************************ -->
+<div class="topbar">
+  <div class="container">
+    <address class="topbar-item">
+      <div class="icon">
+        <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
       </div>
+      <span class="span">Restaurant, Adresse XXX, Rabat, Morocco</span>
+    </address>
+
+    <div class="separator"></div>
+
+    <div class="topbar-item">
+      <div class="icon">
+        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+      </div>
+      <span class="span">10:00 AM - 01:00 AM</span>
     </div>
+
+    <div class="separator"></div>
+
+    <a href="tel:+212623144441" class="topbar-item link">
+      <div class="icon">
+        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+      </div>
+      <span class="span">+212 62314-4441</span>
+    </a>
+
+    <div class="separator"></div>
+
+    <a href="mailto:booking@restaurant.com" class="topbar-item link">
+      <div class="icon">
+        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+      </div>
+      <span class="span">booking@restaurant.com</span>
+    </a>
+  </div>
+</div>
+
 
     <!-- 
     - #HEADER
@@ -103,7 +100,7 @@
           <div class="dot"></div>
         </a>
   
-        <a href="#menu" class="navbar-link hover-underline">
+        <a href="menu.html" class="navbar-link hover-underline">
           <span class="span">Menus</span>
           <div class="dot"></div>
         </a>
@@ -133,55 +130,58 @@
       <section class="hero text-center" aria-label="home" id="home">
 
         <ul class="hero-slider" data-hero-slider>
-
+      
           <li class="slider-item active" data-hero-slider-item>
-
             <div class="slider-bg">
-              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
+              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="Delicious food" class="img-cover">
             </div>
-
-
-
-            <a href="#" class="btn btn-primary slider-reveal">
-              <span class="text text-1">View Our Menu</span>
-
-              <span class="text text-2" aria-hidden="true">View Our Menu</span>
-            </a>
-
+            <div class="hero-content">
+              <h1 class="hero-title">Experience the Best Dining</h1>
+              <p class="hero-text">Delicious flavors and an unforgettable atmosphere.</p>
+              <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Our Menu</a>
+                <a href="#reservation" class="btn btn-secondary">Reserve a Table</a>
+              </div>
+            </div>
           </li>
-
+      
           <li class="slider-item" data-hero-slider-item>
-
             <div class="slider-bg">
-              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="Elegant restaurant" class="img-cover">
             </div>
-
-            <a href="#" class="btn btn-primary slider-reveal">
-              <span class="text text-1">View Our Menu</span>
-
-              <span class="text text-2" aria-hidden="true">Reserver une table</span>
-            </a>
-
+            <div class="hero-content">
+              <h1 class="hero-title">Fine Dining Experience</h1>
+              <p class="hero-text">Indulge in gourmet dishes crafted with passion.</p>
+              <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Our Menu</a>
+                <a href="#reservation" class="btn btn-secondary">Reserve a Table</a>
+              </div>
+            </div>
           </li>
-
+      
           <li class="slider-item" data-hero-slider-item>
-
             <div class="slider-bg">
-              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="Gourmet cuisine" class="img-cover">
             </div>
-
+            <div class="hero-content">
+              <h1 class="hero-title">Taste the Difference</h1>
+              <p class="hero-text">A culinary journey that excites your taste buds.</p>
+              <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Our Menu</a>
+                <a href="#reservation" class="btn btn-secondary">Reserve a Table</a>
+              </div>
+            </div>
           </li>
-
         </ul>
-
+      
         <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
           <ion-icon name="chevron-back"></ion-icon>
         </button>
-
+      
         <button class="slider-btn next" aria-label="slide to next" data-next-btn>
           <ion-icon name="chevron-forward"></ion-icon>
         </button>
-
+      
       </section>
 
 
