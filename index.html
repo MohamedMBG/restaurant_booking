@@ -7,7 +7,6 @@
 
     <!-- this is an importation of google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" 
       rel="stylesheet"/>
@@ -35,61 +34,52 @@
   <body id="top">
     
     <!-- ************************ #PRELOADER ************************ -->
-
     <div class="preload" data-preaload>
       <div class="circle"></div>
       <p class="text">Aureluis</p>
     </div>
 
-    <!-- ************************ #TOP BAR ************************ -->
+   <!-- ************************ #TOP BAR ************************ -->
+  <div class="topbar">
+    <div class="container">
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">Restaurant, Adresse XXX, Rabat, Morocco</span>
+      </address>
 
-    <!-- ************************ #TOP BAR ************************ -->
-<div class="topbar">
-  <div class="container">
-    <address class="topbar-item">
-      <div class="icon">
-        <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+      <div class="separator"></div>
+
+      <div class="topbar-item">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">10:00 AM - 01:00 AM</span>
       </div>
-      <span class="span">Restaurant, Adresse XXX, Rabat, Morocco</span>
-    </address>
 
-    <div class="separator"></div>
+      <div class="separator"></div>
 
-    <div class="topbar-item">
-      <div class="icon">
-        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-      </div>
-      <span class="span">10:00 AM - 01:00 AM</span>
+      <a href="tel:+212623144441" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">+212 62314-4441</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:booking@restaurant.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">booking@restaurant.com</span>
+      </a>
     </div>
-
-    <div class="separator"></div>
-
-    <a href="tel:+212623144441" class="topbar-item link">
-      <div class="icon">
-        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-      </div>
-      <span class="span">+212 62314-4441</span>
-    </a>
-
-    <div class="separator"></div>
-
-    <a href="mailto:booking@restaurant.com" class="topbar-item link">
-      <div class="icon">
-        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-      </div>
-      <span class="span">booking@restaurant.com</span>
-    </a>
   </div>
-</div>
 
 
-    <!-- 
-    - #HEADER
-  -->
-    <!-- 
-    - #HEADER
-  -->
-    
+    <!-- * HEADER * -->    
   <header class="header" data-header>
     <div class="container_header">
    
@@ -110,8 +100,8 @@
           <div class="dot"></div>
         </a>
   
-        <a href="#chefs" class="navbar-link hover-underline">
-          <span class="span">Our Chefs</span>
+        <a href="reservation.html" class="navbar-link hover-underline">
+          <span class="span">Reservation</span>
           <div class="dot"></div>
         </a>
         
@@ -119,13 +109,9 @@
   </header>
   
   
-  <!-- working on the main section of the webste * HERO SECTION * -->
+  <!-- * HERO SECTION * -->
    <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
 
       <section class="hero text-center" aria-label="home" id="home">
 
@@ -139,8 +125,8 @@
               <h1 class="hero-title">Experience the Best Dining</h1>
               <p class="hero-text">Delicious flavors and an unforgettable atmosphere.</p>
               <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Our Menu</a>
-                <a href="#reservation" class="btn btn-secondary">Reserve a Table</a>
+                <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+                <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
               </div>
             </div>
           </li>
@@ -153,8 +139,8 @@
               <h1 class="hero-title">Fine Dining Experience</h1>
               <p class="hero-text">Indulge in gourmet dishes crafted with passion.</p>
               <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Our Menu</a>
-                <a href="#reservation" class="btn btn-secondary">Reserve a Table</a>
+                <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+                <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
               </div>
             </div>
           </li>
@@ -167,8 +153,8 @@
               <h1 class="hero-title">Taste the Difference</h1>
               <p class="hero-text">A culinary journey that excites your taste buds.</p>
               <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Our Menu</a>
-                <a href="#reservation" class="btn btn-secondary">Reserve a Table</a>
+                <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+                <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
               </div>
             </div>
           </li>
@@ -184,8 +170,7 @@
       
       </section>
 
-
-      <!-- IN THE FEATURES SECTION WE WILL TALK ABOUT OUR STRENGTH POINTS ( OUR CHEFS , OUR SPACES , .....)  -->
+      <!-- Section des caractéristiques pour mettre en avant les points forts -->
 
       <section class="section features text-center" aria-label="features">
         <div class="container">
@@ -205,8 +190,8 @@
 
                 <h3 class="title-2 card-title">Hygienic Food</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
+                <p class="label-1 card-text">We prioritize cleanliness and quality, ensuring every meal is prepared in a safe and hygienic environment.</p>
+                   
               </div>
             </li>
 
@@ -219,7 +204,7 @@
 
                 <h3 class="title-2 card-title">Fresh Environment</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Enjoy a welcoming ambiance with a clean and refreshing atmosphere, perfect for a relaxing dining experience.</p>
 
               </div>
             </li>
@@ -233,7 +218,7 @@
 
                 <h3 class="title-2 card-title">Skilled Chefs</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Our chefs are experts in crafting delicious dishes using only the finest ingredients, ensuring every meal is a culinary delight.</p>
 
               </div>
             </li>
@@ -247,7 +232,7 @@
 
                 <h3 class="title-2 card-title">Event & Party</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">We specialize in hosting unforgettable events and parties, offering customized menus and exceptional service to make your celebration memorable.</p>
 
               </div>
             </li>
@@ -257,9 +242,7 @@
         </div>
       </section>
 
-      <!-- 
-        - #SERVICE
-      -->
+      <!-- * SERVICE * -->
 
       <section class="section service bg-black-10 text-center" aria-label="service">
         <div class="container">
@@ -268,8 +251,7 @@
           <h2 class="headline-1 section-title" style="color: beige;">We Offer Top Notch</h2>
 
           <p class="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys
-            standard dummy text ever.
+            Indulge in premium flavors crafted to perfection. Our dishes are made with the finest ingredients to bring a royal dining experience to your table.
           </p>
         <div class="container_notches">
           
@@ -310,48 +292,51 @@
 
       <!-- ------------------------- START FOOTER SECTION ------------------------- -->
 
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="footer-col">
-              <h4>our company</h4>
-              <ul>
-                <li> <a href="#">about us</a></li>
-                <li> <a href="#"></a>our service </li>
-                <li> <a href="#"></a>privacy policy</li>
-                <li> <a href="#"></a>affiliate program</li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Help</h4>
-              <ul>
-                <li> <a href="#"> FAQ</a></li>
-                <li> <a href="#"></a>shipping </li>
-                <li> <a href="#"></a>order statuts</li>
-                <li> <a href="#"></a>payement option </li>
-              </ul>
-            </div><div class="footer-col">
-              <h4>online shop</h4>
-              <ul>
-                <li> <a href="#">Signature Dishes </a></li>
-                <li> <a href="#"></a>T-shirts  </li>
-                <li> <a href="#"></a>Magnet</li>
-                <li> <a href="#"></a>Gourmet Scents</li>
-              </ul>
-            </div><div class="footer-col">
-              <h4>follow us</h4>
-              <div class="social-links">
-                <a href="#"><i class="fab-facebook-f"></i></a>
-                  <a href="#"><i class="fab-x"></i></a>
-                    <a href="#"><i class="fa-instgram"></i></a>
-                      <a href="#"><i class="fab-Tiktok"></i></a>
-              </div>
-            </div>
-          </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Our Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Order Status</a></li>
+          <li><a href="#">Payment Options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact Form</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
-      </footer>
+      </div>
+    </div>
+  </div>
+</footer>
 
-      <!-- ------------------------- END FOOTER SECTION ------------------------- -->
+<!-- ------------------------- END FOOTER SECTION ------------------------- -->
+
     
   </body>
 </html>
