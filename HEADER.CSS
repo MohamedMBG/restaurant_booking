@@ -88,14 +88,7 @@
   background: #cc3c00;
 }
 
-.btn-secondary {
-  background: #00bfa6;
-  color: white;
-}
 
-.btn-secondary:hover {
-  background: #008c7a;
-}
 
 .slider-btn {
   position: absolute;

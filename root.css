@@ -36,9 +36,8 @@
 Resetting styles to ensure uniform appearance across different browsers 
 f had la partie hadi b7ala kan7ydo default settings dyal l broswer bach l website dyalna yji kimma 7na bagbhin 
 */
-*,
-*::before,
-*::after {
+/* ======================================================== General Reset ============================================================= */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -75,28 +74,137 @@ button { cursor: pointer; }
 address { 
   font-style: normal; 
 }
+
 /* ========================================= Basic HTML & Body Styles ========================================== */
 html {
-    font-size: 10px; /* hnaya adrna l font dyal website ykoun 3ndo dik 10px */
-    scroll-behavior: smooth; /* had l code bach tji scroll smooth machi 9ass7a */
-  }
-  
-  body {
-    font-family: var(--font-family); /* Ensuring consistent font */
-    color: var(--text-color);
-    background-color: var(--eerie-black-4); /* Background color */
-    line-height: 1.6; 
-  }
-  body
-  /* === Scrollbar Customization === */
-  ::-webkit-scrollbar { 
-    width: 5px; /* Custom width for the scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track { 
-    background-color: transparent; 
-  }
-  
-  ::-webkit-scrollbar-thumb { 
-    background-color: var(--gold-crayola); /* Custom color for the scrollbar thumb */
-  }
+  font-size: 10px; /* Base font size */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+  font-family: var(--font-family); /* Consistent font */
+  color: var(--text-color);
+  background-color: var(--eerie-black-4); /* Background color */
+  line-height: 1.6; 
+  overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+
+/* === Scrollbar Customization === */
+::-webkit-scrollbar { 
+  width: 5px; /* Custom width for the scrollbar */
+}
+
+::-webkit-scrollbar-track { 
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb { 
+  background-color: var(--gold-crayola); /* Custom color for the scrollbar thumb */
+}
+
+/* === Button Styles === */
+.btn {
+  position: relative;
+  color: var(--gold-crayola);
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-5);
+  max-width: max-content;
+  border: 2px solid var(--gold-crayola);
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  border-radius: var(--radius-circle);
+  background-color: var(--gold-crayola);
+  transition: var(--transition-2);
+  z-index: -1;
+}
+
+.btn .text { transition: var(--transition-1); }
+
+.btn .text-2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: max-content;
+  color: var(--smoky-black-1);
+}
+
+.btn:is(:hover, :focus-visible)::before { bottom: -50%; }
+
+.btn:is(:hover, :focus-visible) .text-1 { transform: translateY(-40px); }
+
+.btn:is(:hover, :focus-visible) .text-2 {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-secondary {
+  background-color: var(--gold-crayola);
+  color: var(--black);
+}
+
+.btn-secondary::before { background-color: var(--smoky-black-1); }
+
+.btn-secondary .text-2 { color: var(--white); }
+
+/* === Separator === */
+/* had separator katkhlina ndiro squares mrb3in li toul w l3rd dyalhom 8px w 3ndhom wahd line k7l entourage  */
+
+.separator {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--gold-crayola);
+  transform: rotate(45deg);
+}
+
+/* === Section Subtitle === */
+.section-subtitle {
+  position: relative;
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2);
+  margin-block-end: 12px;
+  text-align: center; 
+}
+
+.section-subtitle::after {
+  content: url('../images/separator.svg');
+  display: block;
+  width: 100px;
+  margin-inline: auto;
+  margin-block-start: 5px;
+}
+
+/* === Grid List === */
+.grid-list {
+  display: grid;
+  gap: 40px;
+}
+
+/* === Shape === */
+.shape {
+  display: none;
+  position: absolute;
+  max-width: max-content;
+  z-index: -1;
+}
+
+/* === Keyframes === */
+@keyframes move {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
+}
