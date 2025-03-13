@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AURELIUS</title>
 
-    <!-- this is an importation of google fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" 
-      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet" />
 
-    <!-- importation du fichier css -->
+    <!-- CSS Files -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="3d_cards.css" />
     <link rel="stylesheet" href="features.css" />
@@ -19,308 +17,320 @@
     <link rel="stylesheet" href="root.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="HEADER.CSS" />
-    <!-- footer section -->
+
+    <!-- Material Icons -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/iconfont/material-icons.min.css"/>
 
-    <!-- PRELOADED IMAGES alors qu on puisse generer les images avant que nous somme besoin d eux pour une experience plus facile -->
-
-    <link rel="preload" href="image.jpg" as="image" />
-    <link rel="preload" href="image.jpg" as="image" />
-    <link rel="preload" href="image.jpg" as="image" />
-
-
-    <!-- on va utiliser une platform poen source pour importer des icons -->
+    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
   </head>
 
   <body id="top">
-   <!-- ************************ #TOP BAR ************************ -->
-   <div class="topbar">
-    <div class="container">
-      <address class="topbar-item">
-        <div class="icon">
-          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span">Restaurant, Adresse XXX, Rabat, Morocco</span>
-      </address>
+    <!-- Preloader -->
+    <iframe id="preloader-iframe" src="preloader.html"
+      onload="hidePreloaderIframe()" style=" position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 10000; " ></iframe>
 
-      <div class="separator"></div>
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="container">
+        <address class="topbar-item">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">Restaurant, Adresse XXX, Rabat, Morocco</span>
+        </address>
 
-      <div class="topbar-item">
-        <div class="icon">
-          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        <div class="separator"></div>
+
+        <div class="topbar-item">
+          <div class="icon">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">10:00 AM - 01:00 AM</span>
         </div>
-        <span class="span">10:00 AM - 01:00 AM</span>
+
+        <div class="separator"></div>
+
+        <a href="tel:+212623144441" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">+212 62314-4441</span>
+        </a>
+
+        <div class="separator"></div>
+
+        <a href="mailto:booking@restaurant.com" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </div>
+          <span class="span">booking@restaurant.com</span>
+        </a>
       </div>
-
-      <div class="separator"></div>
-
-      <a href="tel:+212623144441" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span">+212 62314-4441</span>
-      </a>
-
-      <div class="separator"></div>
-
-      <a href="mailto:booking@restaurant.com" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span">booking@restaurant.com</span>
-      </a>
     </div>
-  </div>
 
+    <!-- Header -->
+    <header class="header" data-header>
+      <div class="container_header">
+        <nav class="navMenu">
+          <a href="#home" class="navbar-link hover-underline active">
+            <span class="span">Home</span>
+            <div class="dot"></div>
+          </a>
 
-    <!-- * HEADER * -->    
-  <header class="header" data-header>
-    <div class="container_header">
-   
-      <nav class="navMenu">
+          <a href="menu.html" class="navbar-link hover-underline">
+            <span class="span">Menus</span>
+            <div class="dot"></div>
+          </a>
 
-        <a href="#home" class="navbar-link hover-underline active">
-          <span class="span">Home</span>
-          <div class="dot"></div>
-        </a>
-  
-        <a href="menu.html" class="navbar-link hover-underline">
-          <span class="span">Menus</span>
-          <div class="dot"></div>
-        </a>
-  
-        <a href="reservation.html" class="navbar-link hover-underline">
-          <span class="span">Reservation</span>
-          <div class="dot"></div>
-        </a>
-        
-      </nav>
-  </header>
-  
-  
-  <!-- * HERO SECTION * -->
-   <main>
-    <article>
+          <a href="reservation.html" class="navbar-link hover-underline">
+            <span class="span">Reservation</span>
+            <div class="dot"></div>
+          </a>
+        </nav>
+      </div>
+    </header>
 
-      <section class="hero text-center" aria-label="home" id="home">
-
-        <ul class="hero-slider" data-hero-slider>
-      
-          <li class="slider-item active" data-hero-slider-item>
-            <div class="slider-bg">
-              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="Delicious food" class="img-cover">
-            </div>
-            <div class="hero-content">
-              <h1 class="hero-title">Experience the Best Dining</h1>
-              <p class="hero-text">Delicious flavors and an unforgettable atmosphere.</p>
-              <div class="hero-buttons">
-                <a href="menu.html" class="btn btn-primary">View Our Menu</a>
-                <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
+    <!-- Main Content -->
+    <main>
+      <article>
+        <!-- Hero Section -->
+        <section class="hero text-center" aria-label="home" id="home">
+          <ul class="hero-slider" data-hero-slider>
+            <li class="slider-item active" data-hero-slider-item>
+              <div class="slider-bg">
+                <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="Delicious food" class="img-cover"/>
               </div>
-            </div>
-          </li>
-      
-          <li class="slider-item" data-hero-slider-item>
-            <div class="slider-bg">
-              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="Elegant restaurant" class="img-cover">
-            </div>
-            <div class="hero-content">
-              <h1 class="hero-title">Fine Dining Experience</h1>
-              <p class="hero-text">Indulge in gourmet dishes crafted with passion.</p>
-              <div class="hero-buttons">
-                <a href="menu.html" class="btn btn-primary">View Our Menu</a>
-                <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
-              </div>
-            </div>
-          </li>
-      
-          <li class="slider-item" data-hero-slider-item>
-            <div class="slider-bg">
-              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="Gourmet cuisine" class="img-cover">
-            </div>
-            <div class="hero-content">
-              <h1 class="hero-title">Taste the Difference</h1>
-              <p class="hero-text">A culinary journey that excites your taste buds.</p>
-              <div class="hero-buttons">
-                <a href="menu.html" class="btn btn-primary">View Our Menu</a>
-                <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      
-        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
-          <ion-icon name="chevron-back"></ion-icon>
-        </button>
-      
-        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
-          <ion-icon name="chevron-forward"></ion-icon>
-        </button>
-      
-      </section>
-
-      <!-- Section des caractéristiques pour mettre en avant les points forts -->
-
-      <section class="section features text-center" aria-label="features">
-        <div class="container">
-
-          <p class="section-subtitle label-2">Why Choose Us</p>
-
-          <h2 class="headline-1 section-title" style="color: beige;">Our Strength</h2>
-
-          <ul class="grid-list">
-
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+              <div class="hero-content">
+                <h1 class="hero-title">Experience the Best Dining</h1>
+                <p class="hero-text">Delicious flavors and an unforgettable atmosphere.</p>
+                <div class="hero-buttons">
+                  <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+                  <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
                 </div>
-
-                <h3 class="title-2 card-title">Hygienic Food</h3>
-
-                <p class="label-1 card-text">We prioritize cleanliness and quality, ensuring every meal is prepared in a safe and hygienic environment.</p>
-                   
               </div>
             </li>
 
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
+            <li class="slider-item" data-hero-slider-item>
+              <div class="slider-bg">
+                <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="Elegant restaurant" class="img-cover" />
+              </div>
+              <div class="hero-content">
+                <h1 class="hero-title">Fine Dining Experience</h1>
+                <p class="hero-text">Indulge in gourmet dishes crafted with passion.</p>
+                <div class="hero-buttons">
+                  <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+                  <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
                 </div>
-
-                <h3 class="title-2 card-title">Fresh Environment</h3>
-
-                <p class="label-1 card-text">Enjoy a welcoming ambiance with a clean and refreshing atmosphere, perfect for a relaxing dining experience.</p>
-
               </div>
             </li>
 
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
+            <li class="slider-item" data-hero-slider-item>
+              <div class="slider-bg">
+                <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="Gourmet cuisine" class="img-cover"/>
+              </div>
+              <div class="hero-content">
+                <h1 class="hero-title">Taste the Difference</h1>
+                <p class="hero-text">A culinary journey that excites your taste buds.</p>
+                <div class="hero-buttons">
+                  <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+                  <a href="reservation.html" class="btn btn-secondary">Reserve a Table</a>
                 </div>
-
-                <h3 class="title-2 card-title">Skilled Chefs</h3>
-
-                <p class="label-1 card-text">Our chefs are experts in crafting delicious dishes using only the finest ingredients, ensuring every meal is a culinary delight.</p>
-
               </div>
             </li>
-
-            <li class="feature-item">
-              <div class="feature-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="title-2 card-title">Event & Party</h3>
-
-                <p class="label-1 card-text">We specialize in hosting unforgettable events and parties, offering customized menus and exceptional service to make your celebration memorable.</p>
-
-              </div>
-            </li>
-
           </ul>
 
-        </div>
-      </section>
+          <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
 
-      <!-- * SERVICE * -->
+          <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+        </section>
 
-      <section class="section service bg-black-10 text-center" aria-label="service">
-        <div class="container">
-          <p class="section-subtitle label-2">Flavors For Royalty</p>
+        <!-- Features Section -->
+        <section class="section features text-center" aria-label="features">
+          <div class="container">
+            <p class="section-subtitle label-2">Why Choose Us</p>
+            <h2 class="headline-1 section-title" style="color: beige;">Our Strength</h2>
 
-          <h2 class="headline-1 section-title" style="color: beige;">We Offer Top Notch</h2>
+            <ul class="grid-list">
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon"/>
+                  </div>
+                  <h3 class="title-2 card-title">Hygienic Food</h3>
+                  <p class="label-1 card-text">
+                    We prioritize cleanliness and quality, ensuring every meal is prepared in a safe and hygienic environment.
+                  </p>
+                </div>
+              </li>
 
-          <p class="section-text">
-            Indulge in premium flavors crafted to perfection. Our dishes are made with the finest ingredients to bring a royal dining experience to your table.
-          </p>
-        <div class="container_notches">
-          
-          <a alt="Mythrill" target="_blank">
-            <div class="card">
-              <div class="wrapper">
-                <img src="https://cloudfront.omsphoto.com/wp-content/uploads/2020/02/OMS-Photo-food-photography-brent-taylor-013-467x700.jpg" class="cover-image" />
-              </div>
-              <img src=".\assets\images\the_breakfast.png" class="title" />
-              <img src=".\assets\images\pancake_element2.png" class="character" />
-            </div>
-          </a>
-          <a alt="Mythrill" target="_blank">
-            <div class="card middle-element">
-              <div class="wrapper">
-                <img src=".\assets\images\lunch_background2.png" class="cover-image" />
-              </div>
-              <img src=".\assets\images\lunch.png" class="title" />
-              <img src=".\assets\images\lunch_element2.png" class="character" />
-            </div>
-          </a>
-          <a alt="Mythrill" target="_blank">
-            <div class="card">
-              <div class="wrapper">
-                <img src=".\assets\images\dinner_background2.png" class="cover-image" />
-              </div>
-              <img src=".\assets\images\dinner.png" class="title" />
-              <img src=".\assets\images\dinner_element3.png" class="character" />
-            </div>
-          </a>
-        </div>
-        </div>
-      </section>
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon"/>
+                  </div>
+                  <h3 class="title-2 card-title">Fresh Environment</h3>
+                  <p class="label-1 card-text">
+                    Enjoy a welcoming ambiance with a clean and refreshing atmosphere, perfect for a relaxing dining experience.
+                  </p>
+                </div>
+              </li>
 
-      <!-- ------------------------- START FOOTER SECTION ------------------------- -->
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon"/>
+                  </div>
+                  <h3 class="title-2 card-title">Skilled Chefs</h3>
+                  <p class="label-1 card-text">
+                    Our chefs are experts in crafting delicious dishes using only the finest ingredients, ensuring every meal is a culinary delight.
+                  </p>
+                </div>
+              </li>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="footer-col">
-              <h4>Our Company</h4>
-              <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Affiliate Program</a></li>
-              </ul>
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon"/>
+                  </div>
+                  <h3 class="title-2 card-title">Event & Party</h3>
+                  <p class="label-1 card-text">
+                    We specialize in hosting unforgettable events and parties, offering customized
+                    menus and exceptional service to make your celebration memorable.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about text-center" aria-labelledby="about-label" id="about">
+          <div class="the_container">
+            <div id="slider">
+              <img src="assets/images/dark_space.jpg" width="800" height="500" alt="food" class="img-cover" id="slide"/>
+              <div id="precedent" onclick="ChangeSlide(-1)"></div>
+              <div id="suivant" onclick="ChangeSlide(1)">></div>
             </div>
-            <div class="footer-col">
-              <h4>Help</h4>
-              <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Order Status</a></li>
-                <li><a href="#">Payment Options</a></li>
-              </ul>
+
+            <div class="about_details">
+              <span>About Our Restaurant</span>
+              <h2 style="color: var(--gold-crayola);">Get Your Order, Live Your Story</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+              <br />
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's standard dummy text ever since the 1500s,
+              </p>
             </div>
-            <div class="footer-col">
-              <h4>Contact Us</h4>
-              <ul>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">Contact Form</a></li>
-              </ul>
+          </div>
+        </section>
+
+        <!-- Service Section -->
+        <section class="section service bg-black-10 text-center" aria-label="service">
+          <div class="container">
+            <p class="section-subtitle label-2">Flavors For Royalty</p>
+            <h2 class="headline-1 section-title" style="color: beige;">We Offer Top Notch</h2>
+            <p class="section-text">
+              Indulge in premium flavors crafted to perfection. Our dishes are made with the finest ingredients to bring a royal dining experience to your table.
+            </p>
+
+            <div class="container_notches">
+              <a alt="Mythrill" target="_blank">
+                <div class="card">
+                  <div class="wrapper">
+                    <img
+                      src="https://cloudfront.omsphoto.com/wp-content/uploads/2020/02/OMS-Photo-food-photography-brent-taylor-013-467x700.jpg"
+                      class="cover-image"
+                    />
+                  </div>
+                  <img src="./assets/images/the_breakfast.png" class="title" />
+                  <img src="./assets/images/pancake_element2.png" class="character" />
+                </div>
+              </a>
+
+              <a alt="Mythrill" target="_blank">
+                <div class="card middle-element">
+                  <div class="wrapper">
+                    <img src="./assets/images/lunch_background2.png" class="cover-image" />
+                  </div>
+                  <img src="./assets/images/lunch.png" class="title" />
+                  <img src="./assets/images/lunch_element2.png" class="character" />
+                </div>
+              </a>
+
+              <a alt="Mythrill" target="_blank">
+                <div class="card">
+                  <div class="wrapper">
+                    <img src="./assets/images/dinner_background2.png" class="cover-image" />
+                  </div>
+                  <img src="./assets/images/dinner.png" class="title" />
+                  <img src="./assets/images/dinner_element3.png" class="character" />
+                </div>
+              </a>
             </div>
-            <div class="footer-col">
-              <h4>Follow Us</h4>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-              </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Our Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment Options</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Contact Form</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
         </div>
-      </footer>
-    <!-- ------------------------- END FOOTER SECTION ------------------------- -->    
-
+      </div>
+    </footer>
   </body>
 </html>
